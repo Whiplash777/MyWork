@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+		<title>add row sample</title> 
+		<link href="jquery-easyui-1.5/themes/default/easyui.css" rel="external nofollow" rel="stylesheet" /> 
+		<style> 
+.autoRows{ 
+	width: 350px; border:1px green solid; 
+} 
+.autoRows tbody tr td{ 
+	border-bottom:1px green solid; 
+	margin:0px; 
+} 
+.autoRows thead{ 
+	background-color:#8ec7d7; 
+} 
+.autoRows tfoot { 
+	background-color: #8ec7d7; 
+} 
+		</style> 
+	</head> 
+	<body> 
+		<table border="0" cellspacing="0" id="table1" class="autoRows"> 
+			<thead> 
+				<tr> 
+					<th>表头1</th> 
+					<th>表头1</th> 
+					<th>表头1</th> 
+				</tr> 
+				<tr> 
+					<th>表头2</th> 
+					<th>表头2</th> 
+					<th>表头2</th> 
+				</tr> 
+			</thead> 
+			<tbody> 
+				<tr> 
+					<td> 
+						<input id="Button1" type="button" value="insertAfter" onclick="addrow(this);" /></td> 
+					<td> 
+						<input id="Button3" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);" /></td> 
+					<td> 
+						<input id="Text2" type="text" value="aaaa" /></td> 
+				</tr> 
+				<tr> 
+					<td> 
+						<input id="Button2" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this,1,true,false);" /></td> 
+					<td> 
+						<input id="Button4" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);" /></td> 
+					<td> 
+						<input id="Text1" name="ttt" type="text" value="asdfasfasfdsd" /></td> 
+				</tr> 
+				<tr> 
+					<td> 
+						<input id="Button5" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this,1,true,false);" /></td> 
+					<td> 
+						<input id="Button6" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);" /></td> 
+					<td> 
+						<input id="Text3" type="text" name="Text3" /></td> 
+				</tr> 
+			</tbody> 
+			<tfoot> 
+				<tr> 
+					<th>表尾1</th> 
+					<th>表尾2</th> 
+					<th>表尾3</th> 
+				</tr> 
+			</tfoot> 
+		</table> 
+		<div style="height:20px;"></div> 
+		<table border="0" cellspacing="0" id="table2" class="autoRows"> 
+			<thead> 
+				<tr> 
+					<th>表头1</th> 
+					<th>表头1</th> 
+					<th>表头1</th> 
+				</tr> 
+				<tr> 
+					<th>表头2</th> 
+					<th>表头2</th> 
+					<th>表头2</th> 
+				</tr> 
+			</thead> 
+			<tbody> 
+				<tr> 
+					<td> 
+						<input id="Button7" type="button" value="insertAfter" onclick="addrow(this);" /></td> 
+					<td> 
+						<input id="Button8" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);" /></td> 
+					<td> 
+						<input id="Text4" type="text" value="aaaa" /></td> 
+				</tr> 
+				<tr> 
+					<td> 
+						<input id="Button9" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);" /></td> 
+					<td> 
+						<input id="Button10" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);" /></td> 
+					<td> 
+						<input id="Text5" name="ttt" type="text" value="asdfasfasfdsd" /></td> 
+				</tr> 
+				<tr> 
+					<td> 
+						<input id="Button11" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);" /></td> 
+					<td> 
+						<input id="Button12" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);" /></td> 
+					<td> 
+						<input id="Text6" type="text" name="Text3" /></td> 
+				</tr> 
+			</tbody> 
+			<tfoot> 
+				<tr> 
+					<th>表尾1</th> 
+					<th>表尾2</th> 
+					<th>表尾3</th> 
+				</tr> 
+			</tfoot> 
+		</table> 
+	</body> 
+</html> 
+<script src="js/jquery-1.7.2.min.js"></script> 
+<script src="js/jquery.tableAutoRow.js"></script> 
+<script src="jquery-easyui-1.5/jquery.easyui.min.js"></script> 
+<script src="jquery-timepicker/jquery.timepicker.js"></script> 
+<script type="text/javascript"> 
+$(function () { 
+	$(".autoRows").tableAutoRow(aaa); 
+	function aaa(row) { 
+		$(row).find(':text').timepicker(); 
+	} 
+}); 
+function addrow(obj) { 
+	$.fn.tableAutoRow.insertRow(obj); 
+} 
+</script>

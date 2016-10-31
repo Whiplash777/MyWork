@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Add Row example</title>
+		<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+		<script type="text/javascript">
+<!-- jQuery Code will go underneath this -->
+$(document).ready(function () {  
+	// Code between here will only run when the document is ready
+	$("a[name=addRow]").click(function() {
+		// Code between here will only run 
+		//when the a link is clicked and has a name of addRow
+		$("table#myTable tr:last").after('<tr><td>Row 4</td></tr>');
+		return false;
+	});
+});
+		</script>
+	</head>
+	<body>
+		<table style="width: 100%" id="myTable">
+			<tr><td>Row 1</td></tr>
+			<tr><td>Row 2</td></tr>
+			<tr><td>Row 3</td></tr>
+		</table>
+		<a href="#" name="addRow">Add Row</a>
+	</body>
+</html>
