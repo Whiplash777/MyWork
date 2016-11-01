@@ -4,6 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 		<title>add row sample</title> 
 		<link href="jquery-easyui-1.5/themes/default/easyui.css" rel="external nofollow" rel="stylesheet" /> 
+		<link href="css/plan.css" type="text/css" rel="stylesheet">
 		<style> 
 .autoRows{ 
 	width: 350px; border:1px green solid; 
@@ -21,43 +22,391 @@
 		</style> 
 	</head> 
 	<body> 
+		<ul id="tabs">
+			<li><a href="#" title="tab1">周一</a></li>
+			<li><a href="#" title="tab2">周二</a></li>
+			<li><a href="#" title="tab3">周三</a></li>
+			<li><a href="#" title="tab5">周四</a></li>
+			<li><a href="#" title="tab4">周五</a></li>
+		</ul>
+		<div id="content">
+			<div id="tab1">
+				<h2>Todo:</h2>
+				<table border="0" cellspacing="0" id="table2" class="autoRows"> 
+					<thead> 
+						<tr> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+						</tr> 
+						<tr> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+						</tr> 
+					</thead> 
+					<tbody> 
+						<tr> 
+							<td> 
+								<input id="Button7" type="button" value="insertAfter" onclick="addrow(this);"/>
+							</td> 
+							<td> 
+								<input id="Button8" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);"/>
+							</td> 
+							<td> 
+								<input id="Text4" type="text" value="aaaa"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button9" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/>
+							</td> 
+							<td> 
+								<input id="Button10" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text5" name="ttt" type="text" value="asdfasfasfdsd"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button11" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/></td> 
+							<td> 
+								<input id="Button12" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text6" type="text" name="Text3"/>
+							</td> 
+						</tr> 
+					</tbody> 
+					<tfoot> 
+						<tr> 
+							<th>表尾1</th> 
+							<th>表尾2</th> 
+							<th>表尾3</th> 
+						</tr> 
+					</tfoot> 
+				</table>
+			</div>
+			<div id="tab2">
+				<h2>ToDo</h2>
+				<table border="0" cellspacing="0" id="table2" class="autoRows"> 
+					<thead> 
+						<tr> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+						</tr> 
+						<tr> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+						</tr> 
+					</thead> 
+					<tbody> 
+						<tr> 
+							<td> 
+								<input id="Button7" type="button" value="insertAfter" onclick="addrow(this);"/>
+							</td> 
+							<td> 
+								<input id="Button8" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);"/>
+							</td> 
+							<td> 
+								<input id="Text4" type="text" value="aaaa"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button9" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/>
+							</td> 
+							<td> 
+								<input id="Button10" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text5" name="ttt" type="text" value="asdfasfasfdsd"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button11" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/></td> 
+							<td> 
+								<input id="Button12" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text6" type="text" name="Text3"/>
+							</td> 
+						</tr> 
+					</tbody> 
+					<tfoot> 
+						<tr> 
+							<th>表尾1</th> 
+							<th>表尾2</th> 
+							<th>表尾3</th> 
+						</tr> 
+					</tfoot> 
+				</table>
+			</div>
+			<div id="tab3">
+				<p>TodoToDoDoDoDOdo</p>
+				<table border="0" cellspacing="0" id="table2" class="autoRows"> 
+					<thead> 
+						<tr> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+						</tr> 
+						<tr> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+						</tr> 
+					</thead> 
+					<tbody> 
+						<tr> 
+							<td> 
+								<input id="Button7" type="button" value="insertAfter" onclick="addrow(this);"/>
+							</td> 
+							<td> 
+								<input id="Button8" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);"/>
+							</td> 
+							<td> 
+								<input id="Text4" type="text" value="aaaa"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button9" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/>
+							</td> 
+							<td> 
+								<input id="Button10" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text5" name="ttt" type="text" value="asdfasfasfdsd"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button11" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/></td> 
+							<td> 
+								<input id="Button12" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text6" type="text" name="Text3"/>
+							</td> 
+						</tr> 
+					</tbody> 
+					<tfoot> 
+						<tr> 
+							<th>表尾1</th> 
+							<th>表尾2</th> 
+							<th>表尾3</th> 
+						</tr> 
+					</tfoot> 
+				</table>
+			</div>
+			<div id="tab4">
+				<h3>ToDoToDo</h3>
+				<table border="0" cellspacing="0" id="table2" class="autoRows"> 
+					<thead> 
+						<tr> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+						</tr> 
+						<tr> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+						</tr> 
+					</thead> 
+					<tbody> 
+						<tr> 
+							<td> 
+								<input id="Button7" type="button" value="insertAfter" onclick="addrow(this);"/>
+							</td> 
+							<td> 
+								<input id="Button8" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);"/>
+							</td> 
+							<td> 
+								<input id="Text4" type="text" value="aaaa"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button9" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/>
+							</td> 
+							<td> 
+								<input id="Button10" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text5" name="ttt" type="text" value="asdfasfasfdsd"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button11" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/></td> 
+							<td> 
+								<input id="Button12" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text6" type="text" name="Text3"/>
+							</td> 
+						</tr> 
+					</tbody> 
+					<tfoot> 
+						<tr> 
+							<th>表尾1</th> 
+							<th>表尾2</th> 
+							<th>表尾3</th> 
+						</tr> 
+					</tfoot> 
+				</table>
+			</div>
+			<div id="tab5">
+				<h2>ToDoToDoooo</h2>
+				<table border="0" cellspacing="0" id="table2" class="autoRows"> 
+					<thead> 
+						<tr> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+							<th>表头1</th> 
+						</tr> 
+						<tr> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+							<th>表头2</th> 
+						</tr> 
+					</thead> 
+					<tbody> 
+						<tr> 
+							<td> 
+								<input id="Button7" type="button" value="insertAfter" onclick="addrow(this);"/>
+							</td> 
+							<td> 
+								<input id="Button8" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);"/>
+							</td> 
+							<td> 
+								<input id="Text4" type="text" value="aaaa"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button9" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/>
+							</td> 
+							<td> 
+								<input id="Button10" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text5" name="ttt" type="text" value="asdfasfasfdsd"/>
+							</td> 
+						</tr> 
+						<tr> 
+							<td> 
+								<input id="Button11" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/></td> 
+							<td> 
+								<input id="Button12" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+							</td> 
+							<td> 
+								<input id="Text6" type="text" name="Text3"/>
+							</td> 
+						</tr> 
+					</tbody> 
+					<tfoot> 
+						<tr> 
+							<th>表尾1</th> 
+							<th>表尾2</th> 
+							<th>表尾3</th> 
+						</tr> 
+					</tfoot> 
+				</table>
+			</div>
+		</div>
+		<br>
+		<br>
+		<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+		<script>
+$(document).ready(function() {
+	$("#content div").hide(); // Initially hide all content
+	$("#tabs li:first").attr("id","current"); // Activate first tab
+	$("#content div:first").fadeIn(); // Show first tab content
+
+	$('#tabs a').click(function(e) {
+		e.preventDefault();        
+		$("#content div").hide(); //Hide all content
+		$("#tabs li").attr("id",""); //Reset id's
+		$(this).parent().attr("id","current"); // Activate this
+		$('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
+	});
+})();
+		</script>
 		<table border="0" cellspacing="0" id="table1" class="autoRows"> 
 			<thead> 
 				<tr> 
-					<th>表头1</th> 
-					<th>表头1</th> 
-					<th>表头1</th> 
+					<th>周一</th> 
+					<th>周二</th> 
+					<th>周三</th> 
+					<th>周四</th> 
+					<th>周五</th> 
 				</tr> 
 				<tr> 
-					<th>表头2</th> 
-					<th>表头2</th> 
-					<th>表头2</th> 
+					<th>11.1</th> 
+					<th>11.2</th> 
+					<th>11.3</th> 
+					<th>11.4</th> 
+					<th>11.5</th> 
 				</tr> 
 			</thead> 
 			<tbody> 
 				<tr> 
 					<td> 
-						<input id="Button1" type="button" value="insertAfter" onclick="addrow(this);" /></td> 
+						<input id="Button1" type="button" value="insertAfter" onclick="addrow(this);"/>
+					</td> 
 					<td> 
-						<input id="Button3" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);" /></td> 
+						<input id="Button3" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);"/>
+					</td> 
 					<td> 
-						<input id="Text2" type="text" value="aaaa" /></td> 
+						<input id="Text2" type="text" value="aaaa"/>
+					</td> 
+					<td> 
+						<input id="Text5" type="text" value="aaaa"/>
+					</td> 
+					<td> 
+						<textarea id="textarea2" type="textarea" value="textarea2">textarea2</textarea>
+					</td> 
 				</tr> 
 				<tr> 
 					<td> 
-						<input id="Button2" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this,1,true,false);" /></td> 
+						<input id="Button2" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this,1,true,false);"/>
+					</td> 
 					<td> 
-						<input id="Button4" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);" /></td> 
+						<input id="Button4" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+					</td> 
 					<td> 
-						<input id="Text1" name="ttt" type="text" value="asdfasfasfdsd" /></td> 
+						<input id="Text1" name="ttt" type="text" value="asdfasfasfdsd"/>
+					</td> 
+					<td>
+						<input id="Text4" name="tttt" type="text" value="ksljdf"/>
+					</td>
+					<td> 
+						<textarea id="textarea1" type="textarea" value="textarea1">textarea1</textarea>
+					</td> 
 				</tr> 
 				<tr> 
 					<td> 
-						<input id="Button5" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this,1,true,false);" /></td> 
+						<input id="Button5" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this,1,true,false);"/>
+					</td> 
 					<td> 
-						<input id="Button6" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);" /></td> 
+						<input id="Button6" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+					</td> 
 					<td> 
-						<input id="Text3" type="text" name="Text3" /></td> 
+						<input id="Text3" type="text" name="Text3"/>
+					</td> 
+					<td>
+						<input id="Text6" name="ttttt" type="text" value="ksljdf"/>
+					</td>
+					<td> 
+						<textarea id="textarea3" type="textarea" value="textarea3">textarea3</textarea>
+					</td> 
 				</tr> 
 			</tbody> 
 			<tfoot> 
@@ -65,6 +414,8 @@
 					<th>表尾1</th> 
 					<th>表尾2</th> 
 					<th>表尾3</th> 
+					<th>表尾4</th> 
+					<th>表尾5</th> 
 				</tr> 
 			</tfoot> 
 		</table> 
@@ -85,27 +436,35 @@
 			<tbody> 
 				<tr> 
 					<td> 
-						<input id="Button7" type="button" value="insertAfter" onclick="addrow(this);" /></td> 
+						<input id="Button7" type="button" value="insertAfter" onclick="addrow(this);"/>
+					</td> 
 					<td> 
-						<input id="Button8" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);" /></td> 
+						<input id="Button8" type="button" value="Clear" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, false);"/>
+					</td> 
 					<td> 
-						<input id="Text4" type="text" value="aaaa" /></td> 
+						<input id="Text4" type="text" value="aaaa"/>
+					</td> 
 				</tr> 
 				<tr> 
 					<td> 
-						<input id="Button9" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);" /></td> 
+						<input id="Button9" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/>
+					</td> 
 					<td> 
-						<input id="Button10" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);" /></td> 
+						<input id="Button10" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+					</td> 
 					<td> 
-						<input id="Text5" name="ttt" type="text" value="asdfasfasfdsd" /></td> 
+						<input id="Text5" name="ttt" type="text" value="asdfasfasfdsd"/>
+					</td> 
 				</tr> 
 				<tr> 
 					<td> 
-						<input id="Button11" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);" /></td> 
+						<input id="Button11" type="button" value="insertBefore" onclick="$.fn.tableAutoRow.insertRow(this, 1, true, false);"/></td> 
 					<td> 
-						<input id="Button12" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);" /></td> 
+						<input id="Button12" type="button" value="Reset" onclick="$.fn.tableAutoRow.clearRowData(this, 2, 2, true);"/>
+					</td> 
 					<td> 
-						<input id="Text6" type="text" name="Text3" /></td> 
+						<input id="Text6" type="text" name="Text3"/>
+					</td> 
 				</tr> 
 			</tbody> 
 			<tfoot> 
@@ -118,7 +477,8 @@
 		</table> 
 	</body> 
 </html> 
-<script src="js/jquery-1.7.2.min.js"></script> 
+<!--<script src="js/jquery-1.7.2.min.js"></script>--> 
+<script src="js/jquery-3.1.1.js"></script> 
 <script src="js/jquery.tableAutoRow.js"></script> 
 <script src="jquery-easyui-1.5/jquery.easyui.min.js"></script> 
 <script src="jquery-timepicker/jquery.timepicker.js"></script> 
