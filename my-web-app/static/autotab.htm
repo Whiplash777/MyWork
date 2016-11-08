@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯CSS3实现的tab标签</title>
+<link href="css/plan.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<ul id="tabs">
+  <li><a href="#" title="tab1">星期一</a></li>
+  <li><a href="#" title="tab2">星期二</a></li>
+  <li><a href="#" title="tab3">星期三</a></li>
+  <li><a href="#" title="tab4">星期四</a></li>
+  <li><a href="#" title="tab5">星期五</a></li>
+</ul>
+<div id="content">
+  <div title="A" style="overflow: auto; padding: 0px;" id="tab1">
+    <h2>this is h2</h2>
+		<iframe src="autorow.htm" id="A" frameborder="0" style="width:100%;height:100%"></iframe>
+  </div>
+  <div title="B" style="overflow; auto; padding: 0px;" id="tab2">
+    <p>this is p</p>
+		<iframe src="autorow.htm" id="B" frameborder="0" style="width:100%;height:100%"></iframe>
+  </div>
+  <div title="C" style="overflow; auto; padding: 0px;" id="tab3">
+    <h3>this is h3</h3>
+		<iframe src="autorow.htm" id="C" frameborder="0" style="width:100%;height:100%"></iframe>
+  </div>
+  <div title="D" style="overflow; auto; padding; 0px;" id="tab4">
+    <h2>this is h2</h2>
+    <h3>this is h3</h3>
+    <p>this is ppp</p>
+		<iframe src="autorow.htm" id="D" frameborder="0" style="width:100%;height:100%"></iframe>
+  </div>
+  <div title="E" style="overflow; auto; padding: 0px;" id="tab5">
+    <h3>this is h3</h3>
+		<iframe src="autorow.htm" id="E" frameborder="0" style="width:100%;height:100%"></iframe>
+  </div>
+</div>
+<br>
+<br>
+<!--<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>-->
+<script src="js/jquery-3.1.1.js"></script> 
+<script>
+$(document).ready(function() {
+	$("#content div").hide(); // Initially hide all content
+	$("#tabs li:first").attr("id","current"); // Activate first tab
+	$("#content div:first").fadeIn(); // Show first tab content
+
+	console.log("this is in ready function...");
+	$('#tabs a').click(function(e) {
+		e.preventDefault();        
+		$("#content div").hide(); //Hide all content
+		$("#tabs li").attr("id",""); //Reset id's
+		$(this).parent().attr("id","current"); // Activate this
+		$('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
+	});
+})
+</script>
+<!--<script>
+$(function(){
+	$('#content').tabs({
+		onSelect: function(title){
+			loadHtmlFile(title);
+			console.log("this is onSelect...");
+		}
+	});	
+});
+
+function loadHtmlFile(title){
+	switch(title) {
+		case "A":
+			{
+				$("#A").attr("src", "autorow.htm");
+				break;
+			}
+		case "B":
+			{
+				$("#B").attr("src", "autorow.htm");
+				break;
+			}
+		case "C":
+			{
+				$("#C").attr("src", "autorow.htm");
+				break;
+			}
+		case "D":
+			{
+				$("#D").attr("src", "autorow.htm");
+				break;
+			}
+	}
+}
+</script>-->
+</body>
+</html>

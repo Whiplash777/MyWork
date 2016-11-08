@@ -1,55 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>纯CSS3实现的tab标签</title>
-<link href="css/plan.css" type="text/css" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ALL PLAN</title>
+<link rel=stylesheet type=text/css href="css/main.css">
 </head>
-
 <body>
-<ul id="tabs">
-  <li><a href="#" title="tab1">One</a></li>
-  <li><a href="#" title="tab2">Two</a></li>
-  <li><a href="#" title="tab3">Three</a></li>
-  <li><a href="#" title="tab4">Four</a></li>
-</ul>
-<div id="content">
-  <div id="tab1">
-    <h2>this is h2</h2>
-		<iframe src="autorow.htm"/><iframe>
-  </div>
-  <div id="tab2">
-    <p>this is p</p>
-		<iframe src="autorow.htm"/><iframe>
-  </div>
-  <div id="tab3">
-    <h3>this is h3</h3>
-		<iframe src="autorow.htm"/><iframe>
-  </div>
-  <div id="tab4">
-    <h2>this is h2</h2>
-    <h3>this is h3</h3>
-    <p>this is ppp</p>
-		<iframe src="autorow.htm"/><iframe>
-  </div>
+
+<!-- 代码部分begin -->
+<div class="hc_lnav jslist">
+	<div class="allbtn">
+		<h2><a href="#"><strong>&nbsp;</strong>UserName<i>&nbsp;</i></a></h2>
+		<ul style="width:190px" class="jspop box">
+			<li class=a1>
+				<div class=tx><a href="#"><i>&nbsp;</i>Name</a> </div>
+				<dl>
+					<dt>MaoZongWu</dt>
+				</dl>
+				<div class=pop>
+					<dl>
+						<dl>
+							<dt>Detail Plan</dt>
+						</dl>
+					</dl>
+					<div class=clr></div>
+					<iframe src="autotab.htm" id="A" frameborder="0" style="width:100%;height:100%"></iframe>
+				</div>
+			</li>
+			<li class=a2>
+				<div class=tx><a href=""><i>&nbsp;</i>Name</a> </div>
+				<dl>
+					<dt>ZhengXiaoKai</dt>
+				</dl>
+				<div class=pop>
+					<dl>
+						<dl>
+							<dt>Detail Plan</dt>
+						</dl>
+					</dl>
+					<div class=clr></div>
+					<iframe src="autotab.htm" id="B" frameborder="0" style="width:100%;height:100%"></iframe>
+				</div>
+			</li>
+			<li class=a3>
+				<div class=tx><a href=""><i>&nbsp;</i>Name</a> </div>
+				<dl>
+					<dt>ChenPeng</dt>
+				</dl>
+				<div class=pop>
+					<dl>
+						<dl>
+							<dt>Detail Plan</dt>
+						</dl>
+					</dl>
+					<div class=clr></div>
+					<iframe src="autotab.htm" id="C" frameborder="0" style="width:100%;height:100%"></iframe>
+				</div>
+			</li>
+			<li class=a4>
+				<div class=tx><a href=""><i>&nbsp;</i>Name</a> </div>
+				<dl>
+					<dt>ZhangJianQiang</dt>
+				</dl>
+				<div class=pop>
+					<dl>
+						<dl>
+							<dt>Detail Plan</dt>
+						</dl>
+					</dl>
+					<div class=clr></div>
+					<iframe src="autotab.htm" id="D" frameborder="0" style="width:100%;height:100%"></iframe>
+				</div>
+			</li>
+		</ul>
+	</div>
 </div>
-<br>
-<br>
-<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-<script>
-$(document).ready(function() {
-	$("#content div").hide(); // Initially hide all content
-	$("#tabs li:first").attr("id","current"); // Activate first tab
-	$("#content div:first").fadeIn(); // Show first tab content
-    
-    $('#tabs a').click(function(e) {
-        e.preventDefault();        
-        $("#content div").hide(); //Hide all content
-        $("#tabs li").attr("id",""); //Reset id's
-        $(this).parent().attr("id","current"); // Activate this
-        $('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
-    });
-})();
-</script>
+<!-- 代码部分end -->
+
 </body>
 </html>
