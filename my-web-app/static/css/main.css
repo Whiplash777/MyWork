@@ -30,7 +30,7 @@ body.hc_list .hc_lnav .allbtn ul{display:block}
 .hc_lnav .allbtn ul li dt{padding-left:10px;width:30px;float:left;padding-top:1px}
 .hc_lnav .allbtn ul li dd{line-height:22px;width:150px;float:left;padding-top:2px}
 /*二级导航隐藏*/
-.hc_lnav .allbtn ul li .pop{border-bottom:#599900 2px solid;position:absolute;border-left:medium none;padding-bottom:10px;background-color:#fcfcfc;min-height:466px;padding-left:30px;width:640px;padding-right:30px;display:none;height:464px;border-top:medium none;top:0px;border-right:#599900 2px solid;padding-top:10px;left:190px;box-shadow:4px 4px 5px -1px #999999;-webkit-box-shadow:4px 4px 5px -1px #999999;-moz-box-shadow:4px 4px 5px -1px #999999}
+.hc_lnav .allbtn ul li .pop{border-bottom:#599900 2px solid;position:absolute;border-left:medium none;padding-bottom:10px;background-color:#fcfcfc;min-height:466px;padding-left:30px;width:800px;padding-right:30px;display:none;height:464px;border-top:medium none;top:0px;border-right:#599900 2px solid;padding-top:10px;left:190px;box-shadow:4px 4px 5px -1px #999999;-webkit-box-shadow:4px 4px 5px -1px #999999;-moz-box-shadow:4px 4px 5px -1px #999999}
 .hc_lnav .allbtn ul li .pop h3{display:none;font-size:14px}
 .hc_lnav .allbtn ul li .pop dl{padding-bottom:6px;color:#666666;padding-top:6px}
 .hc_lnav .allbtn ul li .pop dl:hover{background-color:#f3f3f3}

@@ -1,7 +1,7 @@
 @charset "utf-8";
 body {
 	width: 700px;
-	margin: 100px auto 0 auto;
+	margin: 4px 4px 0 4px;
 	font-family: Arial, Helvetica;
 	font-size: small;
 	background: #444;
@@ -80,7 +80,7 @@ body {
 #content {
 	background: #fff;
 	padding: 2em;
-	height: 440px;
+	height: 400px;
 	position: relative;
 	z-index: 2;
 	-moz-border-radius: 0 5px 5px 5px;
